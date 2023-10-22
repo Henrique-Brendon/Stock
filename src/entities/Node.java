@@ -2,7 +2,7 @@ package entities;
 
 public class Node<T> {
     private T element;
-    private Node left, righit;
+    private Node left, right;
 
     public Node(){
 
@@ -11,7 +11,7 @@ public class Node<T> {
     public Node(T element){
         this.element =  element;
         left =  null;
-        righit = null;
+        right = null;
     }
 
     public T getElement() {
@@ -30,12 +30,12 @@ public class Node<T> {
         this.left = left;
     }
 
-    public Node getRighit() {
-        return righit;
+    public Node getRight() {
+        return right;
     }
     
-    public void setRighit(Node righit) {
-        this.righit = righit;
+    public void setRight(Node right) {
+        this.right = right;
     } 
 }
 
