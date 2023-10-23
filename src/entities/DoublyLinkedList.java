@@ -3,17 +3,10 @@ package entities;
 public class DoublyLinkedList<T> {
     private Node start;
     private Node end;
-    private T element;
-    int size;
+    private int size;
 
     public DoublyLinkedList(){
 
-    }
-    
-    public DoublyLinkedList(T element){
-        start = null;
-        end = null;
-        this.element = element;
     }
 
     private Node getStart() {
@@ -32,14 +25,6 @@ public class DoublyLinkedList<T> {
         this.end = end;
     }
 
-    private T getElement() {
-        return element;
-    }
-
-    private void setElement(T element) {
-        this.element = element;
-    }
-    
     public int getSize(){
         return size;
     }
@@ -164,4 +149,15 @@ public class DoublyLinkedList<T> {
         return str.toString();
     }
 
+
+    public String customToString() {
+        StringBuilder str = new StringBuilder();
+        Node<T> atual = getStart();
+        str.append(atual.getElement()).append("\n");
+        while(atual.getRight() != null) {
+            atual = atual.getRight();
+            str.append(atual.getElement()).append("\n");
+        }
+        return str.toString();
+    }
 }
