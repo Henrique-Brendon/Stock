@@ -37,6 +37,29 @@ public class DoublyLinkedList<T> {
         return false;
     }
 
+    public T findElementByIndex(int index) {
+        if(index < 0 || index >= getSize()) {
+            return null;
+        }
+        Node <T> current = null;
+        int currentIndex = 0;
+
+        if(index < getSize() / 2){
+            current = getStart();
+            while(currentIndex < index){
+                current =  current.getRight();
+                currentIndex++;
+            }
+        } else {
+            current = getEnd();
+            while(currentIndex < getSize() - index - 1){ 
+                current = current.getLeft();
+                currentIndex++;
+            }
+        }
+        return current.getElement();
+    }
+
     public void insertStart(T element){
         Node node = new Node();
         node.setElement(element);
