@@ -14,8 +14,9 @@ public class Items {
     public Items(){
 
     }
+
     
-    private Items(int id, String name, double price, String data) {
+    protected Items(int id, String name, double price, String data) {
         this.id =  id;
         this.name = name;
         this.price = price;

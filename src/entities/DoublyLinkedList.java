@@ -1,5 +1,6 @@
 package entities;
 
+
 public class DoublyLinkedList<T> {
     private Node start;
     private Node end;
@@ -134,6 +135,8 @@ public class DoublyLinkedList<T> {
         size --;
         return out;
     }
+
+
 
     public String toString(){
         if(emptyList()) {
